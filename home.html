@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PYSTANT | STREETWEAR</title>
+  <style>
+    /* Modern CSS Reset & Variable Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { 
+      background-color: #121212; /* Premium dark background */
+      color: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* 1. FIXED & TRANSPARENT NAVBAR */
+    .header { 
+      background-color: rgba(18, 18, 18, 0.95); 
+      backdrop-filter: blur(10px); /* Modern frosted-glass effect */
+      padding: 15px 40px; 
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    /* FIXED: Restored original logo properties with a stylized container badge */
+    .brand-logo-wrapper img {
+      width: 120px;
+      height: auto;
+      background-color: #ffffff; /* Gives your original black logo a clean backing */
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    .des h2 { 
+      color: #ffffff; 
+      font-size: 1rem; 
+      letter-spacing: 4px; 
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Modern Nav Links Container */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-btn { 
+      padding: 10px 24px;
+      background-color: transparent;
+      color: #ffffff !important; 
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .nav-btn:hover {
+      background-color: #ffffff;
+      color: #121212 !important;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    /* 2. HERO / SHOP TITLE SECTION */
+    .shop { 
+      text-align: center; 
+      padding: 160px 20px 40px 20px; /* Space for the fixed header */
+    }
+
+    .py1 {
+      color: #ffffff !important;
+      font-size: 8vw; /* Scales beautifully based on screen width */
+      font-weight: 900;
+      letter-spacing: -2px; /* Tight, aggressive look popular in modern fashion lines */
+      text-transform: uppercase;
+      line-height: 0.9;
+      opacity: 0.95;
+    }
+
+    /* 3. SHOWCASE SECTION */
+    .model-section { 
+      margin: 40px 0 0 0; 
+      padding: 0; 
+    }
+
+    /* Lookbook Layout Grid */
+    .image-container {
+      display: flex;
+      justify-content: center; 
+      align-items: flex-end; 
+      gap: 40px; /* Consistent spacing between models */
+      padding: 40px;  
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .image-container img { 
+      display: block; 
+      width: 22vw; /* Dynamic fluid width */
+      max-width: 320px;
+      min-width: 260px;
+      height: auto; 
+      border-radius: 8px; /* Slightly softened edges for modern look */
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      cursor: pointer;
+    }
+
+    /* Interactive Lookbook Depth Effect */
+    .image-container img:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 30px 60px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Middle Model Height Accentuation */
+    .image-container img.tall-model {
+      width: 25vw;
+      max-width: 360px;
+      min-width: 290px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    /* 4. PREMIUM FOOTER ACCENT */
+    .space { 
+      background-color: #000000; 
+      padding: 40px 0; 
+      width: 100%;
+      margin-top: 60px;   
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .space h1 { 
+      margin: 0;       
+      text-align: center; 
+      color: #ffffff; 
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 25px; /* Extremely wide spacing for luxury aesthetic */
+      text-indent: 25px; /* Centers the text perfectly despite extreme letter spacing */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand-logo-wrapper">
+      <img src="file:///E:\pystant prand\prand\black logo.jpg" alt="PYSTANT LOGO">
+      <div class="des">
+        <h2>Streetwear</h2>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-btn" href="contacts.html">Contacts</a>
+      <a class="nav-btn" href="shop3.html">Store</a>
+    </div>
+  </div>
+
+  <div class="shop">
+    <h1 class="py1">PYSTANT SHOP</h1>
+  </div>
+
+  <div class="model-section">
+    
+    <div class="image-container">
+      <img src="model like 1.PNG" alt="Collection Item Left">
+      <img class="tall-model" src="model 2 front.png" alt="Collection Item Center Highlight">
+      <img src="model 2 back.png" alt="Collection Item Right">
+    </div>
+
+    <div class="space">
+      <h1>PYSTANT</h1>
+    </div>
+
+  </div>
+
+</body>
+</html>
