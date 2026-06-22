@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYSTANT | SHOP</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        /* Modernized Responsive Header Layout */
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .head img {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: transparent; 
+            letter-spacing: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 8px 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: white;
+            color: #121212;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .head hr {
+            width: 100%;
+            max-width: 851px;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 15px 0 25px 0;
+        }
+
+        .head h1 {
+            letter-spacing: 10px;
+            font-size: clamp(40px, 8vw, 90px); /* Fluid size: scales smoothly on mobile */
+            text-align: center;
+            font-weight: 900;
+        }
+
+        /* Product Catalog Grid Container */
+        .bord {
+            max-width: 851px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .product-card {
+            display: block;
+            text-decoration: none;
+            position: relative;
+            border-radius: 20px; /* Reduced from 60px for a cleaner card layout */
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .shop-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        /* Image hover effects */
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+        }
+
+        .product-card:hover .shop-img {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="head">
+        <img src="black logo.jpg" width="150" alt="PyStant Logo">
+        
+        <nav class="nav-container">
+            <a class="nav-btn" href="index.html">HOME</a>
+            <a class="nav-btn" href="contacts.html">CONTACTS</a>
+        </nav>
+
+        <hr>
+        <h1>STORE</h1>
+    </header>
+
+    <main class="bord">
+        <a href="celertail.html" class="product-card">
+            <img class="shop-img" src="celertail.jpg" alt="Celertail">
+        </a>
+        <a href="greek%20pystant.html" class="product-card">
+            <img class="shop-img" src="greek%20pystant.jpg" alt="Greek Pystant">
+        </a>
+        <a href="keepgoing.html" class="product-card">
+            <img class="shop-img" src="keep%20going.jpg" alt="Keep Going">
+        </a>
+        <a href="make%20money.html" class="product-card">
+            <img class="shop-img" src="make%20money.jpg" alt="Make Money">
+        </a>
+        <a href="masiac.html" class="product-card">
+            <img class="shop-img" src="masiac.jpg" alt="Masiac">
+        </a>
+        <a href="money%20currency.html" class="product-card">
+            <img class="shop-img" src="money%20currency.jpg" alt="Money Currency">
+        </a>
+        <a href="moses.html" class="product-card">
+            <img class="shop-img" src="moses.jpg" alt="Moses">
+        </a>
+        <a href="muscles%20angle.html" class="product-card">
+            <img class="shop-img" src="muscles%20angle.jpg" alt="Muscles Angle">
+        </a>
+        <a href="NSX.html" class="product-card">
+            <img class="shop-img" src="NSX.jpg" alt="NSX">
+        </a>
+        <a href="pink%20angle.html" class="product-card">
+            <img class="shop-img" src="pink%20angle.jpg" alt="Pink Angle">
+        </a>
+        <a href="quarbian%20angle.html" class="product-card">
+            <img class="shop-img" src="quarbian%20angle.jpg" alt="Quarbian Angle">
+        </a>
+        <a href="red%20angle.html" class="product-card">
+            <img class="shop-img" src="red%20angle.jpg" alt="Red Angle">
+        </a>
+        <a href="snipe.html" class="product-card">
+            <img class="shop-img" src="snipe.jpg" alt="Snipe">
+        </a>
+        <a href="the%20stars.html" class="product-card">
+            <img class="shop-img" src="the%20stars.jpg" alt="The Stars">
+        </a>
+        <a href="violin%20angle.html" class="product-card">
+            <img class="shop-img" src="violin%20angle.jpg" alt="Violin Angle">
+        </a>
+    </main>
+
+</body>
+</html>
