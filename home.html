@@ -59,6 +59,7 @@
     .nav-links {
       display: flex;
       gap: 20px;
+      align-items: center;
     }
     
     .nav-btn { 
@@ -91,7 +92,7 @@
 
     .py1 {
       color: #ffffff !important;
-      font-size: 8vw; /* Scales beautifully based on screen width */
+      font-size: 8vw; /* Scales based on screen width */
       font-weight: 900;
       letter-spacing: -2px; /* Tight, aggressive look popular in modern fashion lines */
       text-transform: uppercase;
@@ -160,13 +161,78 @@
       letter-spacing: 25px; /* Extremely wide spacing for luxury aesthetic */
       text-indent: 25px; /* Centers the text perfectly despite extreme letter spacing */
     }
+
+    /* STYLISH UPGRADED MENU & LOGOUT */
+    .menu {
+      position: relative;
+    }
+    
+    .menu-btn {
+      color: #ffffff;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-btn:hover {
+      background: #ffffff;
+      color: #121212;
+      border-color: #ffffff;
+    }
+
+    .menu-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      background: #1a1a1a;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      min-width: 130px;
+      z-index: 1001;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-content button {
+      width: 100%;
+      border: none;
+      background: #ff3b30;
+      color: #ffffff;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .menu-content button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
     <div class="brand-logo-wrapper">
-      <img src="black logo.jpg" alt="PYSTANT LOGO">
+      <img src="file:///E:\pystant prand\prand\black logo.jpg" alt="PYSTANT LOGO">
       <div class="des">
         <h2>Streetwear</h2>
       </div>
@@ -174,15 +240,21 @@
     <div class="nav-links">
       <a class="nav-btn" href="contacts.html">Contacts</a>
       <a class="nav-btn" href="shop3.html">Store</a>
+      <div class="menu">
+        <button class="menu-btn" onclick="togglemenu()">☰</button>
+        <div class="menu-content" id="menu">
+          <button onclick="logout()">Log out</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="shop">
     <h1 class="py1">PYSTANT SHOP</h1>
+    <p id="welcome"></p>
   </div>
 
   <div class="model-section">
-    
     <div class="image-container">
       <img src="model like 1.PNG" alt="Collection Item Left">
       <img class="tall-model" src="model 2 front.png" alt="Collection Item Center Highlight">
@@ -192,8 +264,32 @@
     <div class="space">
       <h1>PYSTANT</h1>
     </div>
-
   </div>
+
+  <script>
+    if (localStorage.getItem("username") == null) {
+      window.location.href = "index.html"
+    }
+
+    let name = localStorage.getItem("username");
+
+    document.getElementById("welcome").innerHTML = "welcome | " + name;
+
+    function togglemenu() {
+      let menu = document.getElementById("menu");
+
+      if (menu.style.display == "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
 
 </body>
 </html>
