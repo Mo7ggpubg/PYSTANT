@@ -28,7 +28,9 @@ function startapp () {
         return ;
     }
 
-   window.location.href = "home.html"
+   localStorage.setItem("isLoggedIn", "true");
+
+   window.location.href = "home.html";
    
     
 }
